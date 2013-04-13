@@ -1,14 +1,15 @@
-SET(SourceFiles
-  main.cpp
-)
-
 INCLUDE_DIRECTORIES(
   ${CMAKE_CURRENT_BINARY_DIR}
   ${CMAKE_CURRENT_SOURCE_DIR}
 )
 
-ADD_EXECUTABLE(roman ${SourceFiles})
+ADD_LIBRARY(romanNumerals RomanNumerals.cpp)
+INSTALL(TARGETS romanNumerals
+  DESTINATION bin
+)
 
+ADD_EXECUTABLE(roman main.cpp)
+TARGET_LINK_LIBRARIES(roman romanNumerals)
 INSTALL(TARGETS roman
   RUNTIME DESTINATION bin
   BUNDLE DESTINATION bin
