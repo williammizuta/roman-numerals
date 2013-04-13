@@ -6,10 +6,7 @@
 class RomanNumerals
 {
 public:
-	RomanNumerals();
-	~RomanNumerals();
-
-	std::string convert(int number);
+	static std::string convert(int number);
 };
 
 #endif
