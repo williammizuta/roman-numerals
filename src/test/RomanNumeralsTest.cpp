@@ -3,7 +3,7 @@
 #include "gtest/gtest.h"
 
 TEST(RomanNumeralsTest, OnlyIs) {
-	EXPECT_EQ(RomanNumerals::convert(1), "I");
-	EXPECT_EQ(RomanNumerals::convert(2), "II");
-	EXPECT_EQ(RomanNumerals::convert(3), "III");
+	EXPECT_EQ("I", RomanNumerals::convert(1));
+	EXPECT_EQ("II", RomanNumerals::convert(2));
+	EXPECT_EQ("III", RomanNumerals::convert(3));
 }
