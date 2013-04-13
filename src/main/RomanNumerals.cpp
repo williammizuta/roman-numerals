@@ -9,5 +9,9 @@ RomanNumerals::~RomanNumerals() {
 }
 
 std::string RomanNumerals::convert(int number) {
-	return "I";
+	std::string roman;
+	for (int i = 0; i < number; ++i) {
+		roman.append("I");
+	}
+	return roman;
 }
